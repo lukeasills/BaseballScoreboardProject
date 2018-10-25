@@ -1,0 +1,331 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background = "#006600"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background = "#006600">
+        <TextView
+          android:id="@+id/home"
+           android:text="HOME"
+          android:textSize="20sp"
+          android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_marginHorizontal="40dp"
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GUEST"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:id="@+id/visitors"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            />
+        <Button
+            android:minHeight="0dp" android:minWidth="0dp"
+            android:id="@+id/homeScoreButton1"
+            android:layout_width="25dp"
+            android:layout_height="50dp"
+            android:textSize="30sp"
+            android:layout_below="@+id/home"
+            android:layout_marginLeft="42dp"
+            android:layout_marginRight="0dp"
+            android:background="#000000"
+            android:textColor="#ff0000"
+            android:text="0"
+            android:onClick="homeScore1Inc"/>
+        <Button
+            android:minHeight="0dp" android:minWidth="0dp"
+            android:id="@+id/homeScoreButton2"
+            android:layout_width="25dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="2dp"
+            android:textSize="30sp"
+            android:layout_below="@+id/home"
+            android:layout_toRightOf="@id/homeScoreButton1"
+            android:background="#000000"
+            android:textColor="#ff0000"
+            android:onClick="homeScore2Inc"
+            android:text="0"/>
+
+        <Button
+            android:minHeight="0dp" android:minWidth="0dp"
+            android:id="@+id/inningsButton"
+            android:layout_width="25dp"
+            android:layout_height="50dp"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="0dp"
+            android:background="#000000"
+            android:textColor="#ff0000"
+            android:onClick="manInningInc"
+            android:text="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INNING"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:id="@+id/innings"
+            android:layout_below="@id/inningsButton"
+            android:layout_toRightOf="@id/homeScoreButton2"
+            android:layout_marginLeft="67dp"
+            />
+
+        <Button
+            android:minHeight="0dp" android:minWidth="0dp"
+            android:id="@+id/visitorsScoreButton1"
+            android:layout_width="25dp"
+            android:layout_height="50dp"
+            android:textSize="30sp"
+            android:layout_below="@+id/visitors"
+            android:layout_toLeftOf="@id/visitorsScoreButton2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="0dp"
+            android:background="#000000"
+            android:textColor="#ff0000"
+            android:onClick="guestScore1Inc"
+            android:text="0"/>
+        <Button
+            android:minHeight="0dp" android:minWidth="0dp"
+            android:id="@+id/visitorsScoreButton2"
+            android:layout_width="25dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="45dp"
+            android:textSize="30sp"
+            android:layout_below="@+id/visitors"
+            android:layout_alignParentRight="true"
+            android:background="#000000"
+            android:textColor="#ff0000"
+            android:onClick="guestScore2Inc"
+            android:text="0"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:background = "#006600">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BALL"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:id="@+id/ball"
+            android:layout_marginLeft="45dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STRIKE"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:id="@+id/strike"
+            android:layout_marginLeft="69dp"
+            android:layout_toRightOf="@id/ball" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OUT"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:id="@+id/out"
+            android:layout_marginRight="51dp"
+            android:layout_alignParentRight="true" />
+        <Button
+            android:minHeight="0dp" android:minWidth="0dp"
+            android:id="@+id/ballButton"
+            android:layout_width="70dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="43dp"
+            android:textSize="20sp"
+            android:layout_below="@+id/ball"
+            android:background="#000000"
+            android:textColor="#ff0000"
+            android:onClick="manBallInc"
+            android:text="o o o"/>
+        <Button
+            android:minHeight="0dp" android:minWidth="0dp"
+            android:id="@+id/strikeButton2"
+            android:layout_width="50dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="74dp"
+            android:textSize="20sp"
+            android:layout_below="@+id/strike"
+            android:layout_toRightOf="@id/ballButton"
+            android:background="#000000"
+            android:textColor="#ff0000"
+            android:onClick="manStrikeInc"
+            android:text="o o"/>
+        <Button
+            android:minHeight="0dp" android:minWidth="0dp"
+            android:id="@+id/outButton"
+            android:layout_width="50dp"
+            android:layout_height="26dp"
+            android:layout_marginRight="44dp"
+            android:textSize="20sp"
+            android:layout_below="@+id/out"
+            android:layout_alignParentRight="true"
+            android:background="#000000"
+            android:textColor="#ff0000"
+            android:onClick="manOutInc"
+            android:text="o o"/>
+    </RelativeLayout>
+
+
+<RelativeLayout
+    android:layout_width="370dp"
+    android:layout_height="370dp"
+    android:layout_marginLeft="7dp"
+    android:background = "#cc6600">
+
+    <TextView
+        android:id="@+id/thirdBase"
+        android:text="Empty"
+        android:textSize="14sp"
+        android:paddingVertical="20dp"
+        android:textAlignment="center"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#e6e6e6"
+        />
+    <TextView
+        android:id="@+id/secondBase"
+        android:text="Empty"
+        android:textSize="14sp"
+        android:paddingVertical="20dp"
+        android:textAlignment="center"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#e6e6e6"
+        android:layout_alignParentRight="true"
+        />
+    <TextView
+        android:id="@+id/homeBase"
+        android:text="Runner 1"
+        android:textSize="14sp"
+        android:paddingVertical="20dp"
+        android:textAlignment="center"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#e6e6e6"
+        android:layout_alignParentBottom="true"
+        />
+    <TextView
+        android:id="@+id/firstBase"
+        android:text="Empty"
+        android:textSize="14sp"
+        android:paddingVertical="20dp"
+        android:textAlignment="center"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#e6e6e6"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        />
+    <Button
+        android:id="@+id/hitButton"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="12sp"
+        android:layout_toRightOf="@id/homeBase"
+        android:onClick="batterHit"
+        android:text="Hit"/>
+    <Button
+        android:id="@+id/strikeButton"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="12sp"
+        android:onClick="strikeInc"
+        android:layout_toRightOf="@id/hitButton"
+        android:text="Strike"/>
+    <Button
+        android:id="@+id/ballButton2"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="12sp"
+        android:onClick="ballInc"
+        android:layout_toRightOf="@id/strikeButton"
+        android:text="BALL"/>
+    <Button
+        android:id="@+id/firstBaseOutButton"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:textSize="12sp"
+        android:layout_above="@id/firstBase"
+        android:layout_alignParentRight="true"
+        android:onClick="firstBaseOut"
+        android:text="out"/>
+    <Button
+        android:id="@+id/firstBaseRunButton"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="5dp"
+        android:textSize="12sp"
+        android:layout_above="@id/firstBaseOutButton"
+        android:layout_alignParentRight="true"
+        android:onClick="firstBaseRun"
+        android:text="Run"/>
+    <Button
+        android:id="@+id/secondBaseOutButton"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="5dp"
+        android:textSize="12sp"
+        android:layout_toLeftOf="@id/secondBase"
+        android:onClick="secondBaseOut"
+        android:text="out"/>
+    <Button
+        android:id="@+id/secondBaseRunButton"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:textSize="12sp"
+        android:layout_toLeftOf="@id/secondBaseOutButton"
+        android:onClick="secondBaseRun"
+        android:text="Run"/>
+    <Button
+        android:id="@+id/thirdBaseOutButton"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="12sp"
+        android:layout_below="@id/thirdBase"
+        android:onClick="thirdBaseOut"
+        android:text="out"/>
+    <Button
+        android:id="@+id/thirdBaseRunButton"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="12sp"
+        android:layout_below="@id/thirdBaseOutButton"
+        android:onClick="thirdBaseRun"
+        android:text="Run"/>
+
+</RelativeLayout>
+</LinearLayout>
